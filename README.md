@@ -14,4 +14,5 @@ This project implements a rule engine with a frontend and backend setup.
    ```bash
    git clone https://github.com/yourusername/rule-engine.git
    cd rule-engine
+   docker-compose up --build
 
