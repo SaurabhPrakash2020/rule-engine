@@ -1,0 +1,116 @@
+/* Global Styles */
+* {
+  box-sizing: border-box; /* Apply box-sizing globally */
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%; /* Ensure full height for html and body */
+  margin: 0; /* Remove default margin */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; /* Use a system font stack */
+  background-color: #f7f9fc; /* Background color for the entire page */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* App Component Styles */
+.App {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  width: 400px; /* Fixed width */
+  text-align: center; /* Center text inside the box */
+}
+
+/* Headings */
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+  width: 100%; /* Full width for form */
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+  align-items: center; /* Center align the items */
+}
+
+/* Label Styles */
+label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: left; /* Align labels to the left */
+  width: 100%; /* Make label full width */
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"] {
+  width: 100%; /* Full width */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Input Focus Styles */
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+button {
+  width: 100%; /* Full width */
+  padding: 10px;
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer on hover */
+  margin-top: 10px; /* Space above button */
+}
+
+/* Button Hover Styles */
+button:hover {
+  background-color: #0056b3; /* Darker button on hover */
+}
+
+/* Additional Heading Styles */
+h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+h4 {
+  color: #007bff;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* General Div Styles */
+div {
+  margin-bottom: 15px; /* Space below each div */
+  width: 100%; /* Full width for each div */
+  text-align: left; /* Left align text */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 480px) {
+  .App {
+    width: 90%; /* Responsive width */
+    padding: 20px; /* Padding inside the box */
+  }
+}
