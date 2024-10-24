@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./rule-engine-backend
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"                       # Expose backend on port 9090
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/your_database_name  # Replace with your actual DB name
+    depends_on:
+      - mongo                             # Ensure MongoDB starts before backend
+
+  frontend:
+    build:
+      context: ./rulengine-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"                       # Match frontend internal port (3000)
+    depends_on:
+      - backend                           # Ensure backend starts before frontend
+
+  mongo:
+    image: mongo:latest                   # Use the official MongoDB image
+    ports:
+      - "27017:27017"                     # Expose MongoDB on port 27017
+    volumes:
+      - mongo_data:/data/db               # Persist MongoDB data
+
+volumes:
+  mongo_data:                             # Define the volume for MongoDB
+
